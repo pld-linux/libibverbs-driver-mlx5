@@ -1,19 +1,19 @@
 Summary:	Userspace driver for the Mellanox Connect-IB InfiniBand HCAs
 Summary(pl.UTF-8):	Sterownik przestrzeni użytkownika dla kart Mellanox Connect-IB InfiniBand HCA
 Name:		libibverbs-driver-mlx5
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 License:	BSD or GPL v2
 Group:		Libraries
-Source0:	http://www.openfabrics.org/downloads/mlx5/libmlx5-%{version}.tar.gz
-# Source0-md5:	c7fc7da15828b013362195d47eb1ad16
-URL:		http://openib.org/
+Source0:	https://www.openfabrics.org/downloads/mlx5/libmlx5-%{version}.tar.gz
+# Source0-md5:	fdc8f38f01a02e26f38c0965b5357d17
+URL:		https://www.openfabrics.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	libibverbs-devel >= 1.0.3
+BuildRequires:	libibverbs-devel >= 1.1.8
 BuildRequires:	libtool >= 2:2
 BuildRequires:	sed >= 4.0
-Requires:	libibverbs >= 1.0.3
+Requires:	libibverbs >= 1.1.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,7 +37,7 @@ oparte na układzie MT27600 Connect-IB poprzez sterownik jądra mlx5_ib.
 Summary:	Static version of mlx5 driver
 Summary(pl.UTF-8):	Statyczna wersja sterownika mlx5
 Group:		Development/Libraries
-Requires:	libibverbs-static >= 1.0.3
+Requires:	libibverbs-static >= 1.1.8
 
 %description static
 Static version of mlx5 driver, which may be linked directly into
@@ -51,7 +51,7 @@ w aplikację.
 %setup -q -n libmlx5-%{version}
 
 # don't fail on "statement with no effect" warning
-%{__sed} -i -e 's/ -Werror//' configure.in
+#%{__sed} -i -e 's/ -Werror//' configure.ac
 
 %build
 %{__libtoolize}
