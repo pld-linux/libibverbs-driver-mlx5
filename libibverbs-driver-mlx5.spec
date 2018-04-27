@@ -1,8 +1,9 @@
+# NOTE: for versions >= 17 see rdma-core.spec
 Summary:	Userspace driver for the Mellanox Connect-IB InfiniBand HCAs
 Summary(pl.UTF-8):	Sterownik przestrzeni użytkownika dla kart Mellanox Connect-IB InfiniBand HCA
 Name:		libibverbs-driver-mlx5
 Version:	1.2.1
-Release:	1
+Release:	1.1
 License:	BSD or GPL v2
 Group:		Libraries
 Source0:	https://www.openfabrics.org/downloads/mlx5/libmlx5-%{version}.tar.gz
